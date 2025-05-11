@@ -1,3 +1,4 @@
+import 'package:first_project/data/notifiers.dart';
 import 'package:first_project/views/pages/home_page.dart';
 import 'package:first_project/views/pages/profile_page.dart';
 import 'package:first_project/views/widgets/navbar_widget.dart';
@@ -12,7 +13,12 @@ class WidgetTree extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Flutter'), centerTitle: true),
-      body: pages.elementAt(1),
+      body: ValueListenableBuilder(
+        valueListenable: selectedPageNotifier,
+        builder: (context, selectedPage, child) {
+          return pages.elementAt(selectedPage);
+        },
+      ),
       bottomNavigationBar: NavbarWidget(),
     );
   }
