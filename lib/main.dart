@@ -1,3 +1,4 @@
+import 'package:first_project/views/pages/welcome_page.dart';
 import 'package:first_project/views/widget_tree.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +24,7 @@ class _MyAppState extends State<MyApp> {
           brightness: Brightness.dark,
         ),
       ),
-      home: WidgetTree(),
+      home: WelcomePage(),
     );
   }
 }
