@@ -33,6 +33,17 @@ class _SettingsPageState extends State<SettingsPage> {
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
+              ElevatedButton(
+                onPressed: () {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      duration: Duration(seconds: 5),
+                      content: Text('Snackbar'),
+                    ),
+                  );
+                },
+                child: Text('Open Scackbar'),
+              ),
               DropdownButton(
                 value: menuItem,
                 items: [
