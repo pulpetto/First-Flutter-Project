@@ -72,9 +72,18 @@ class _ProfilePageState extends State<ProfilePage> {
                 });
               },
             ),
-            Image.asset('assets/images/wlpp.jpg'),
-            Image.asset('assets/images/wlpp.jpg'),
-            Image.asset('assets/images/wlpp.jpg'),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.teal,
+                foregroundColor: Colors.white,
+              ),
+              child: Text('Click me'),
+            ),
+            ElevatedButton(onPressed: () {}, child: Text('Click me')),
+            FilledButton(onPressed: () {}, child: Text('Click me')),
+            TextButton(onPressed: () {}, child: Text('Click me')),
+            OutlinedButton(onPressed: () {}, child: Text('Click me')),
           ],
         ),
       ),
