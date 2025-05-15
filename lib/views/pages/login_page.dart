@@ -56,7 +56,7 @@ class _LoginPageState extends State<LoginPage> {
               },
             ),
             SizedBox(height: 20.0),
-            FilledButton(
+            ElevatedButton(
               onPressed: () {
                 Navigator.pushReplacement(
                   context,
@@ -67,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 );
               },
-              style: FilledButton.styleFrom(
+              style: ElevatedButton.styleFrom(
                 minimumSize: Size(double.infinity, 40.0),
               ),
               child: Text('Login'),
